@@ -10,6 +10,7 @@ mysql = MySQL(app)
 @app.route('/')
 def employees():
 	cur = mysql.connection.cursor()
+	print(cur)
 	res = cur.execute("SELECT ITEM_NUMBER, DESCRIPTION, LONG_DESCRIPTION FROM XXIBM_PRODUCT_STYLE LIMIT 10")
 	if res > 0:
 		userDetails = cur.fetchall()
