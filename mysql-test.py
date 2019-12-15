@@ -17,7 +17,7 @@ def employees():
             return render_template('employee.html',userDetails=userDetails)
         cur.close()
     except Exception as e:
-        print(str(e))
+        return(str(e))
 
 if __name__ == "__main__":
     app.run()
