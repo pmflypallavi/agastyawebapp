@@ -12,6 +12,7 @@ def employees():
         cur = mysql.connection.cursor()
         print(cur)
         res = cur.execute("SELECT ITEM_NUMBER, DESCRIPTION, LONG_DESCRIPTION FROM XXIBM_PRODUCT_STYLE LIMIT 10")
+        print(res)
         if res > 0:
             userDetails = cur.fetchall()
             return render_template('employee.html',userDetails=userDetails)
