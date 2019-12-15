@@ -1,2 +1,2 @@
 APP_CONFIG=config.py
-APP_FILE=wsgi.py
+APP_FILE=mysql-test.py
