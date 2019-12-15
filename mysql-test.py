@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from flask_mysqldb import MySQL
 app = Flask(__name__)
-app.config['MYSQL_HOST'] = 'custom-mysql.gamification.svc.cluster.local'
+app.config['MYSQL_HOST'] = 'custom-mysql.gamification.svc.cluster.local:3306'
 app.config['MYSQL_USER'] = 'xxuser'
 app.config['MYSQL_PASSWORD'] = 'welcome1'
 app.config['MYSQL_DB']= 'sampledb'
