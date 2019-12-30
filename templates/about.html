@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>About Kool App</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    
+    <h1>Kool App </h1>
+    <p>Choose Product from List</p>
+    <form name=userDetails action="" method='POST'>
+    <select name= userDetails method="GET" action="/">
+        <option value= "{{userDetails[0]}}" SELECTED>{{userDetails[0]}}</option>"
+          {% for colour in userDetails[1:] %}
+            <option value="{{colour}}">{{colour}}</option>
+          {% endfor %}
+     </select>
+     <button type="submit" name="desc">Submit</button>
+     </form>
+      <p> Price: </p>
+      <p> {{Listprice}} </p>
+    {% endblock %}
+  </body>
+</html>
