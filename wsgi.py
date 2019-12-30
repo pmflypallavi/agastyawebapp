@@ -6,7 +6,7 @@ application.config['MYSQL_USER'] = 'xxuser'
 application.config['MYSQL_PASSWORD'] = 'welcome1'
 application.config['MYSQL_DB']= 'sampledb'
 mysql = MySQL(application)
-@app.route('/')
+@application.route('/')
 def employees():
     try:
         cur = mysql.connection.cursor()
