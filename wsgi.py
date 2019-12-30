@@ -1,11 +1,11 @@
 from flask import Flask, render_template
 from flask_mysqldb import MySQL
-app = Flask(__name__)
-app.config['MYSQL_HOST'] = 'custom-mysql.gamification.svc.cluster.local'
-app.config['MYSQL_USER'] = 'xxuser'
-app.config['MYSQL_PASSWORD'] = 'welcome1'
-app.config['MYSQL_DB']= 'sampledb'
-mysql = MySQL(app)
+application = Flask(__name__)
+application.config['MYSQL_HOST'] = 'custom-mysql.gamification.svc.cluster.local'
+application.config['MYSQL_USER'] = 'xxuser'
+application.config['MYSQL_PASSWORD'] = 'welcome1'
+application.config['MYSQL_DB']= 'sampledb'
+mysql = MySQL(application)
 @app.route('/')
 def employees():
     try:
@@ -21,4 +21,4 @@ def employees():
         return str(e)
 
 if __name__ == "__main__":
-    app.run(port=8080)
+    application.run()
